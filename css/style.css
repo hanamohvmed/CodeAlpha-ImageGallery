@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Cabin", sans-serif;
+}
+.title{
+    text-align: center;
+    margin: 0 auto;
+    font-weight: 600;
+    background-color: #cfab90d9;
+    color: white;
+    padding: 15px;
+}
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin: 80px 0px -15px 0px;
+}
+.buttons button{
+    padding: 13px;
+    border-radius: 15px;
+    border: none;
+    background-color: #dec0aa;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.buttons button:hover,
+.buttons button.active{
+    background-color: rgb(192, 162, 139);
+}
+.card.hide{
+    display: none;
+}
+.title span{
+    font-size: 20px;
+}
+.imgs-container{
+    width: 100%;
+    min-height: 100vh;
+    align-items: center;
+    padding: 50px 8%;
+    margin-top: 20px;
+}
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(215px, 1fr));
+    gap: 40px;
+}
+.gallery img{
+    max-width: 100%;
+    width: 250px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px #8d8d8d;
+    transition: 0.3s;
+}
+.gallery img:hover{
+    scale: 0.95;
+    transform: rotate(3deg);
+}
+footer p{
+    text-align: center;
+    background-color: #cfab90d9;
+    color: white;
+    padding: 16px;
+    font-size: 18px;
+    font-weight: 600;
+}
+@media (max-width: 768px) {
+    .buttons{
+        gap: 10px;
+    }
+    .imgs-container{
+        padding: 50px 20%;
+    }
+    .lightboxOverlay{
+        width: 100% !important;
+    }
+}
